@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fying.stu_school.mapper.StuMapper">
+    <!--填写映射-->
+    <select id="findByName" resultMap="Student" >
+        select  * from stu where  name = #{name}
+    </select>
+
+    <select id=""></select>
+
+    <insert id="insertStudent" useGeneratedKeys="true" keyProperty="id" >
+        insert into stu(name,password,salt,modifier,modification_time) values (#{name},#{password},#{salt},#{modifier},#{modificationTime})
+    </insert>
+
+    <resultMap id="Student" type="com.fying.stu_school.pojo.Student">
+       <id property="id" column="id"></id>
+        <result property="modificationTime" column="modification_time"></result>
+    </resultMap>
+</mapper>

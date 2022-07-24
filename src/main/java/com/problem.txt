@@ -1,0 +1,50 @@
+1. 加密
+ public static String getMd5three(String salt, String password) {
+
+          for (int i = 0; i < 3; i++) {
+              password = DigestUtils.md5DigestAsHex((salt + password + salt).getBytes(StandardCharsets.UTF_8));
+          }
+          return password;
+      }
+
+2.
+  spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+  spring.datasource.url=jdbc://mysql://localhost:3306?stu_school
+  spring.datasource.name=root
+  spring.datasource.password=123456
+
+
+3.转化String的方法
+String.valueOf
+
+4.mybatis插入时主键自增
+
+5.模板添加Editor---->File And Code Templates —>中间选中Files ----->点击+号，添加模板 ----->输入模板名字：Name:XML File.xml （name可以自定义） ------>后缀名extension：xml —>在面板中间输入内容：
+<?xml version="1.0" encoding="UTF-8" ?>
+  <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+  <mapper namespace="${NAMESPACE}" >
+  <!--填写映射-->
+  </mapper>
+
+6.idea窗口不折叠
+
+7.ServiceException 继承 运行时异常， 其他异常继承ServiceException
+  当
+
+
+8.mybatis.mapper-location="classpath:mapper/*.xml"这段话错了
+
+9.String.isEmpty()
+
+10.前端传字段，后端用对象接收
+
+
+11.would dispatch back to the current handler URL [/register] again. Check your ViewResolver setup! (Hint: This may be the result of an unspecified view, due to default view name generation.) 	at org.springframework.web.servlet.view.InternalResourceView.prep
+既把@Controller改成@RestController
+
+前端
+1.非块级元素居中，块级元素居中
+2.相对父元素正好居中
+3.注意顺序，不要获取元素再点击按钮
+4.json?{"code":3001,"message":"用户已注册","data":null}
+5.要记得写id
